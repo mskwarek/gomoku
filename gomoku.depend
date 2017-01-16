@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1369769577 source:/home/marcin/projekt/gomoku/main.c
+	<sys/types.h>
+	<ncurses.h>
+	<ctype.h>
+	<stdlib.h>
+	<unistd.h>
+
+1370099498 source:/home/marcin/Pobrane/kk/main.c
+	<sys/types.h>
+	<ncurses.h>
+	<ctype.h>
+	<stdlib.h>
+	<unistd.h>
+
