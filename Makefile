@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS= -std=c11 -Werror -I. -Incurses
+CFLAGS= -Werror -I. -Incurses
 DEPS = ui.h
 
 %.o: %.c $(DEPS)

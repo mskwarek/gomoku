@@ -1,3 +1,6 @@
+#ifndef __UI_H__
+#define __UI_H__
+
 #include <sys/types.h>
 #include <stdlib.h>
 #include <ncurses.h>
@@ -60,3 +63,5 @@ void ResetGame ();
 int OpponentColor (int Player);
 void BlinkRow (int X, int Y, int Dx, int Dy, int Piece);
 void BlinkWinner (int Piece, int X, int Y, int WinningLine);
+
+#endif

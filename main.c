@@ -1,9 +1,3 @@
-#include <sys/types.h>
-#include <ncurses.h>
-#include <ctype.h>
-#include <stdlib.h>
-#include <unistd.h>
-
 #include <ui.h>
 
 

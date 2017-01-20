@@ -1,6 +1,5 @@
 #include <ui.h>
 
-
   /* rozmiar planszy */
 
 
