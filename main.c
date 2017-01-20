@@ -4,40 +4,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-  /* rozmiar planszy */
-#define SIZE 20
+#include <ui.h>
 
-  /* Value of having 0, 1,2,3,4 or 5 pieces in line */
-int Weight[9] = {0, 0, 4, 20, 100, 500, 2500, 12500, 0};
-
-#define Null 0
-#define Horiz 1
-#define DownLeft 2
-#define DownRight 3
-#define Vert 4
-
-  //DWÓCH GRACZY
-#define Empty 0
-#define Cross 1
-#define Nought 2
-
-char PieceChar[Nought + 1] = {' ', 'X','o'};
-
-int Board[SIZE + 1][SIZE + 1];  /* plansza */
-int Player;                     /* gracz który rusza sie następny */
-int TotalLines;                 /* linijki które pozostały wolne */
-int GameWon;                    /* zmienna ustawiana gdy gra się kończy */
-int condition;                  /* warunek kończący grę */
-int WinningLine;
-
-int Line[4][SIZE + 1][SIZE + 1][Nought + 1];
-
-  /* użyteczność pola dla konkretnego gracza */
-int Value[SIZE + 1][SIZE + 1][Nought + 1];
-
-int X, Y;                       /* Move coordinates */
-char Command;                   /* Polecenie z klawiatury */
-int AutoPlay = FALSE;           /* program vs program */
 
   /*prototypy funkcji użytych w programie*/
 

@@ -1,5 +1,9 @@
 #include <ui.h>
 
+
+  /* rozmiar planszy */
+
+
 void Initialize()
 {
     //srand(getpid() + 13);
