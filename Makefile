@@ -1,12 +1,24 @@
 CC=gcc
-CFLAGS= -Werror -I. -Incurses
-DEPS = ui.h
+CFLAGS=-Werror -I. -Incurses -Iinclude
+#DEPS=ui.h
+LDFLAGS=-lncurses
+OBJDIR=obj
+SRCDIR=src 
+INC=-Iinclude
 
-%.o: %.c $(DEPS)
-	$(CC) -c -o $@ $< $(CFLAGS)
+SOURCES=main.c $(SRCDIR/*)
+OBJECTS=$(SOURCES:.c=.o)
+EXECUTABLE=gomoku
 
-gomoku: main.o ui.o
-	gcc -o gomoku main.o ui.o -I. -lncurses
+all: $(SOURCES) $(EXECUTABLE)
+
+$(EXECUTABLE): $(OBJECTS)
+	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
+
+.c.o:
+	$(CC) $(CFLAGS) $< -o $@
 
 clean:
 	rm -rf *.o
+	rm -rf obj/*
+	rm -rf bin
