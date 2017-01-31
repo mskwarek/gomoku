@@ -21,12 +21,12 @@
 #define Vert 4
 
 
-char PieceChar[Nought + 1] = {' ', 'X','o'};
+static char PieceChar[Nought + 1] = {' ', 'X','o'};
 int Board[SIZE + 1][SIZE + 1];  /* plansza */
 
 
   /* Value of having 0, 1,2,3,4 or 5 pieces in line */
-int Weight[9] = {0, 0, 4, 20, 100, 500, 2500, 12500, 0};
+static int Weight[9] = {0, 0, 4, 20, 100, 500, 2500, 12500, 0};
 
 
 
@@ -44,7 +44,7 @@ int Value[SIZE + 1][SIZE + 1][Nought + 1];
 
 int X, Y;                       /* Move coordinates */
 char Command;                   /* Polecenie z klawiatury */
-int AutoPlay = FALSE;           /* program vs program */
+static int AutoPlay = FALSE;           /* program vs program */
 
 
 void Initialize (void);

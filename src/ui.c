@@ -163,9 +163,13 @@ void ResetGame()
 int OpponentColor(int Player)
 {
    if (Player == Cross)
+   {
          return Nought;
+   }
    else
+   {
          return Cross;
+   }
 }
 
  //------------------PODŚWIETLANIE LINII WYGRANEGO--------------------

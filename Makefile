@@ -1,12 +1,12 @@
 CC=gcc
-CFLAGS=-Werror -I. -Incurses -Iinclude
+CFLAGS=-Werror -I. -Incurses -Iinclude/.
 #DEPS=ui.h
 LDFLAGS=-lncurses
 OBJDIR=obj
 SRCDIR=src 
-INC=-Iinclude
+INC=-Iinclude/.
 
-SOURCES=main.c $(SRCDIR/*)
+SOURCES=main.c src/ui.c
 OBJECTS=$(SOURCES:.c=.o)
 EXECUTABLE=gomoku
 
@@ -16,7 +16,7 @@ $(EXECUTABLE): $(OBJECTS)
 	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
 
 .c.o:
-	$(CC) $(CFLAGS) $< -o $@
+	$(CC) $(CFLAGS) $< -o $@ -lncurses
 
 clean:
 	rm -rf *.o

@@ -6,7 +6,7 @@
 int Random (int x);
 void Add (int *Num);
 void Update (int Lin[], int Valu[], int Opponent);
-void MakeMove (int X, int Y);
+static void MakeMove (int X, int Y);
 int GameOver (void);
 void FindMove (int *X, int *Y);
 char GetChar (void);
@@ -53,7 +53,7 @@ void Update(int Lin[], int Valu[], int Opponent)
    if (Lin[Player] == 1) Valu[Opponent] -= Weight[Lin[Opponent] + 1];
 }
 
-void MakeMove(int X, int Y)
+static void MakeMove(int X, int Y)
 {
    int Opponent;
    int X1, Y1;
